@@ -1,5 +1,5 @@
 {
-  "name": "@mapbox/sexagesimal",
+  "name": "sexagesimal",
   "description": "parse coordinates in sexagesimal form",
   "version": "1.2.0",
   "main": "index.js",
