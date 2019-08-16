@@ -32,7 +32,7 @@ function coordToDMS(input, dim) {
   var whole = Math.floor(abs);
   var fraction = abs - whole;
   var fractionMinutes = fraction * 60;
-  var minutes = Math.floor((fractionMinutes*1000))/1000;
+  var minutes = fractionMinutes.toFixed(3);
 
   return {
     whole: whole,
