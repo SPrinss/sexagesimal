@@ -21,8 +21,7 @@ function formatPair(input) {
 function format(input, dim) {
   var dms = coordToDMS(input, dim);
   return dms.whole + '° ' +
-    (dms.minutes ? dms.minutes + '\' ' : '') +
-    (dms.seconds ? dms.seconds + '" ' : '') + dms.dir;
+    (dms.minutes ? dms.minutes + '\' ' : '')
 }
 
 
@@ -33,13 +32,11 @@ function coordToDMS(input, dim) {
   var whole = Math.floor(abs);
   var fraction = abs - whole;
   var fractionMinutes = fraction * 60;
-  var minutes = Math.floor(fractionMinutes);
-  var seconds = Math.floor((fractionMinutes - minutes) * 60);
+  var minutes = Math.floor((fractionMinutes*1000))/1000;
 
   return {
     whole: whole,
     minutes: minutes,
-    seconds: seconds,
     dir: dir
   };
 }
